@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Reddit+Mono:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>GameShelf</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'GS/css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>GameShelf</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="game-list">
+        <h2>Featured Games</h2>
+        <ul>
+          {% for game in games %}
+          <li>
+            <img
+              src="{{ game.background_image }}"
+              alt="{{ game.name }}"
+              style="width: 100%; height: auto"
+            />
+            <h3>{{ game.name }}</h3>
+            <p>Released: {{ game.released }}</p>
+            <p>
+              Genres: {% if game.genres %} {{ game.genres|join:", " }} {% else
+              %} No genres available {% endif %}
+            </p>
+          </li>
+          {% empty %}
+          <li>No games found.</li>
+          {% endfor %}
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 GameShelf. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

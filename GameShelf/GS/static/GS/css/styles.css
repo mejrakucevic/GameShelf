@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Reddit+Mono:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+
+  background-color: #09152b;
+  color: #eeeeee;
+}
+
+header {
+  background-color: #082751;
+  color: #b1e7ff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+.game-list {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.game-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.game-list ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.game-list li {
+  background: #161616;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 450px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+  transition: transform 0.2s ease; /* Optional: Adds a smooth transform effect */
+}
+
+.game-list li:hover {
+  transform: translateY(-5px); /* Optional: Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Optional: Enhance shadow on hover */
+}
+.game-list img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.game-list h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
