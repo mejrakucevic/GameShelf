@@ -42,7 +42,7 @@ main {
 }
 
 .game-list {
-  max-width: 1500px;
+  max-width: 1800px;
   margin: 0 auto;
 }
 
@@ -56,20 +56,22 @@ main {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 35px;
+
   justify-content: center;
 }
 
 .game-list li {
-  background: #161616;
+  background: #ecf9ff;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 350px;
-  height: 450px;
+  height: 500px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
   transition: transform 0.2s ease; /* Optional: Adds a smooth transform effect */
+  color: #09152b;
 }
 
 .game-list li:hover {
@@ -82,6 +84,11 @@ main {
   border-radius: 5px;
 }
 
+.game-list p {
+  font-size: 15px;
+  padding: 10px;
+}
+
 .game-list h3 {
   margin-top: 10px;
   font-size: 1.2em;
@@ -89,7 +96,8 @@ main {
 }
 
 footer {
-  background-color: #333;
+  background-color: #082751;
+
   color: #fff;
   text-align: center;
   padding: 10px;

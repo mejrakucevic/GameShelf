@@ -34,16 +34,24 @@
           {% for game in games %}
           <li>
             <img
-              src="{{ game.background_image }}"
-              alt="{{ game.name }}"
-              style="width: 100%; height: auto"
+              src="{{ game.image_link }}"
+              alt="{{ game.title }}"
+              style="
+                width: 100%;
+                max-width: 200px;
+                aspect-ratio: 2 / 3;
+                object-fit: cover;
+              "
             />
-            <h3>{{ game.name }}</h3>
-            <p>Released: {{ game.released }}</p>
+            <h1>{{ game.title }}</h1>
+            <p>Released: {{ game.release_date }}</p>
+            <p>Genre: {{ game.genre }}</p>
+
             <p>
-              Genres: {% if game.genres %} {{ game.genres|join:", " }} {% else
-              %} No genres available {% endif %}
+              Platforms: {% if game.platform %} {{ game.platform }} {% else %}
+              No platforms available {% endif %}
             </p>
+            <p>Meaat: {{ game.description}}</p>
           </li>
           {% empty %}
           <li>No games found.</li>

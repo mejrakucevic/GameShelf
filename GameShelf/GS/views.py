@@ -1,12 +1,13 @@
+# views.py
+
 from django.shortcuts import render
-from .utils import fetch_games
+from .models import Game
+
 
 def home(request):
-    games = fetch_games()
-    # Ensure genres are just names
-    for game in games:
-        if 'genres' in game:
-            game['genres'] = [genre['name'] for genre in game.get('genres', [])]
-        else:
-            game['genres'] = []  # Ensure 'genres' is always a list
+    games = Game.objects.all()  # Ensure this line returns a queryset
+    # Check if games is None
+    if games is None:
+        games = []  # Handle None by assigning an empty list
     return render(request, 'GS/home.html', {'games': games})
+
