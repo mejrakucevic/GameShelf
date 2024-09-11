@@ -56,7 +56,7 @@ ROOT_URLCONF = 'GameShelf.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'GS/templates')],  # Ensure this path is correct
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Reddit+Mono:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>GameShelf</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'GS/css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <img src="{% static 'GS/images/logo.png' %}" class="logo" />
+        <h1>GameShelf</h1>
+      </div>
+      <nav>
+        <ul>
+          <button>Sign Up</button>
+          <button>Log In</button>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      {% block content %}
+      <!-- Content from child templates will be inserted here -->
+      {% endblock %}
+    </main>
+
+    <footer>
+      <p>&copy; 2024 GameShelf</p>
+    </footer>
+  </body>
+</html>

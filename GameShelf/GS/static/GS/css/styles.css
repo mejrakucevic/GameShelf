@@ -9,36 +9,136 @@
 body {
   font-family: "Inconsolata", monospace;
 
-  background-color: #09152b;
+  background-color: #dcdcdc;
   color: #eeeeee;
+  overflow: hidden;
 }
 
 header {
-  background-color: #082751;
-  color: #b1e7ff;
+  background-color: #031b29;
+  color: #e6e6e6;
   padding: 20px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Larger and darker shadow */
 }
 
-header h1 {
-  font-size: 2.5em;
+header button {
+  background-color: #e9e9e9; /* Darker green on hover */
+  font-family: "Inconsolata", monospace;
+
+  border: none; /* Remove borders */
+  color: #031b29;
+  padding: 15px 32px; /* Top and bottom padding, left and right padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Align buttons next to each other */
+  font-size: 16px; /* Text size */
+  margin: 4px 2px; /* Margins between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.title {
+  margin-left: 50px;
+}
+
+.bg-img {
+  background-size: contain;
+  overflow: hidden;
+  height: 1600px; /* Height of the container */
+  width: 2600px;
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Optional: Keep the background fixed on scroll */
+  overflow: hidden;
+  position: relative; /* Ensure proper layering */
+}
+
+.logo {
+  width: 120px;
+  margin-right: -2px; /* Optional: Add some space between the logo and the title */
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.main-content {
+  color: white;
+  display: flex;
+  flex-direction: column; /* Ensure the buttons stack vertically */
+  position: relative; /* Ensure positioning context for z-index */
+  z-index: 1; /* Make sure it's above the background */
+  text-align: center; /* Center align text */
+  margin-top: -1300px;
+  align-items: end;
+  margin-right: 500px;
+}
+
+.main-content h1 {
+  display: flex;
+  text-align: left;
+  font-size: 7vh;
+  margin-bottom: 35px;
+}
+
+.main-content button {
+  background-color: #e9e9e9; /* Darker green on hover */
+  font-family: "Inconsolata", monospace;
+  font-weight: 600;
+
+  border: none; /* Remove borders */
+  color: #031b29;
+  padding: 25px 42px; /* Top and bottom padding, left and right padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Align buttons next to each other */
+  font-size: 20px; /* Text size */
+  margin: 4px 2px; /* Margins between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+button:hover {
+  background-color: #073754; /* Green background */
+  transform: scale(1.05); /* Slightly enlarge button */
+  color: white; /* White text */
+}
+
+button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add focus outline */
+}
+
+.btns {
+  display: flex;
+  align-items: left;
+  gap: 20px;
+  margin-right: 510px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   gap: 20px;
+  font-size: 1.5vh;
+  margin-right: 50px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-}
-
-main {
-  padding: 20px;
+  align-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .game-list {
@@ -96,7 +196,7 @@ main {
 }
 
 footer {
-  background-color: #082751;
+  background-color: #031b29;
 
   color: #fff;
   text-align: center;

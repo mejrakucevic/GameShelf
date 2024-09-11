@@ -1,67 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Reddit+Mono:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="background-container">
+  <img src="{% static 'GS/images/bg1.png' %}" class="bg-img" />
+</div>
 
-    <title>GameShelf</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'GS/css/styles.css' %}" />
-  </head>
-  <body>
-    <header>
-      <h1>GameShelf</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<div class="main-content">
+  <h1>
+<b>GameShelf<b /> - <i>track<br />
+    your game
+    experience
+  </h1>
+  <div class="btns">
+    <button>Game Catalog</button>
+    <button>Sign Up</button>
+  </div>
+</div>
 
-    <main>
-      <section class="game-list">
-        <h2>Featured Games</h2>
-        <ul>
-          {% for game in games %}
-          <li>
-            <img
-              src="{{ game.image_link }}"
-              alt="{{ game.title }}"
-              style="
-                width: 100%;
-                max-width: 200px;
-                aspect-ratio: 2 / 3;
-                object-fit: cover;
-              "
-            />
-            <h1>{{ game.title }}</h1>
-            <p>Released: {{ game.release_date }}</p>
-            <p>Genre: {{ game.genre }}</p>
-
-            <p>
-              Platforms: {% if game.platform %} {{ game.platform }} {% else %}
-              No platforms available {% endif %}
-            </p>
-            <p>Meaat: {{ game.description}}</p>
-          </li>
-          {% empty %}
-          <li>No games found.</li>
-          {% endfor %}
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      <p>&copy; 2024 GameShelf. All rights reserved.</p>
-    </footer>
-  </body>
-</html>
+{% endblock%}
