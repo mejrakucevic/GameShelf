@@ -8,10 +8,10 @@
 
 body {
   font-family: "Inconsolata", monospace;
-
-  background-color: #dcdcdc;
+  background-color: #0c2e42;
   color: #eeeeee;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-y: auto; /* Enables vertical scrolling */
 }
 
 header {
@@ -43,73 +43,9 @@ header button {
   transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
-.title {
-  margin-left: 50px;
-}
-
-.bg-img {
-  background-size: contain;
-  overflow: hidden;
-  height: 1600px; /* Height of the container */
-  width: 2600px;
-  background-position: center center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-attachment: fixed; /* Optional: Keep the background fixed on scroll */
-  overflow: hidden;
-  position: relative; /* Ensure proper layering */
-}
-
 .logo {
   width: 120px;
   margin-right: -2px; /* Optional: Add some space between the logo and the title */
-}
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-}
-
-.title a {
-  text-decoration: none;
-  color: whitesmoke;
-  list-style: none;
-}
-
-.main-content {
-  color: white;
-  display: flex;
-  flex-direction: column; /* Ensure the buttons stack vertically */
-  position: relative; /* Ensure positioning context for z-index */
-  z-index: 1; /* Make sure it's above the background */
-  text-align: center; /* Center align text */
-  margin-top: -1300px;
-  align-items: end;
-  margin-right: 500px;
-}
-
-.main-content h1 {
-  display: flex;
-  text-align: left;
-  font-size: 7vh;
-  margin-bottom: 35px;
-}
-
-.main-content button {
-  background-color: #e9e9e9; /* Darker green on hover */
-  font-family: "Inconsolata", monospace;
-  font-weight: 600;
-
-  border: none; /* Remove borders */
-  color: #031b29;
-  padding: 25px 42px; /* Top and bottom padding, left and right padding */
-  text-align: center; /* Center text */
-  text-decoration: none; /* Remove underline */
-  display: inline-block; /* Align buttons next to each other */
-  font-size: 20px; /* Text size */
-  margin: 4px 2px; /* Margins between buttons */
-  cursor: pointer; /* Pointer cursor on hover */
-  border-radius: 20px; /* Rounded corners */
-  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
 }
 
 button:hover {
@@ -123,22 +59,6 @@ button:focus {
   box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add focus outline */
 }
 
-.btns {
-  display: flex;
-  align-items: left;
-  gap: 20px;
-  margin-right: 510px;
-}
-
-.btns a {
-  text-decoration: none;
-  color: #031b29;
-}
-
-.btns a:hover {
-  text-decoration: none;
-  color: whitesmoke;
-}
 nav ul {
   list-style: none;
   display: flex;
@@ -157,17 +77,27 @@ nav a {
 }
 
 .game-list {
+  cursor: pointer;
+
   max-width: 1800px;
   margin: 0 auto;
+  padding-bottom: 50px; /* Adding some padding at the bottom for better spacing */
+}
+
+.game-list h1 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
 }
 
 .game-list h2 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
+  font-size: 2.5em;
+  margin-top: 50px;
 }
 
 .game-list ul {
+  margin-top: 50px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -177,8 +107,8 @@ nav a {
 }
 
 .game-list li {
-  background: #ecf9ff;
-  padding: 10px;
+  background: #031b29;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: 350px;
@@ -186,7 +116,7 @@ nav a {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
   transition: transform 0.2s ease; /* Optional: Adds a smooth transform effect */
-  color: #09152b;
+  color: #e6e6e6;
 }
 
 .game-list li:hover {

@@ -9,7 +9,7 @@ def fetch_games():
 }
   params = {
     "key": "8cf3a81e6fe7452b9228249eafd7d334",
-    "page_size": 35
+    "page_size": 20
 }
   
   response = requests.get(url, headers=headers, params=params)
