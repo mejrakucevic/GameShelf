@@ -1,0 +1,20 @@
+<!-- game_detail.html -->
+{% extends 'base.html' %} {% block content %}
+<div class="game-detail">
+  {% if error %}
+  <p>{{ error }}</p>
+  {% else %}
+  <h1>{{ title }}</h1>
+  <img
+    src="{{ image_link }}"
+    alt="{{ title }}"
+    style="width: 100%; max-width: 600px"
+  />
+  <p><strong>Description:</strong> {{ description }}</p>
+  <p><strong>Rating:</strong> {{ rating }}</p>
+  <p><strong>Developer:</strong> {{ developer }}</p>
+  <p><strong>Publisher:</strong> {{ publisher }}</p>
+  <p><strong>Release Date:</strong> {{ release_date }}</p>
+  {% endif %}
+</div>
+{% endblock %}

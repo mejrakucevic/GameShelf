@@ -6,28 +6,20 @@
     <ul>
       {% for game in games %}
       <li>
-        <img
-          src="{{ game.image_link }}"
-          alt="{{ game.title }}"
-          style="
-            width: 100%;
-            max-width: 250px;
-            aspect-ratio: 2 / 3;
-            object-fit: cover;
-            height: 90%;
-          "
-        />
-        <h1>{{ game.title }}</h1>
-        {% comment %}
-        <p>Released: {{ game.release_date }}</p>
-        <p>Genre: {{ game.genre }}</p>
-
-        <p>
-          Platforms: {% if game.platform %} {{ game.platform }} {% else %} No
-          platforms available {% endif %}
-        </p>
-        <p>Meaat: {{ game.description}}</p>
-        {% endcomment %}
+        <a href="{% url 'game_detail' game.id %}">
+          <img
+            src="{{ game.image_link }}"
+            alt="{{ game.title }}"
+            style="
+              width: 100%;
+              max-width: 250px;
+              aspect-ratio: 2 / 3;
+              object-fit: cover;
+              height: 90%;
+            "
+          />
+          <h1>{{ game.title }}</h1>
+        </a>
       </li>
       {% empty %}
       <li>No games found.</li>
