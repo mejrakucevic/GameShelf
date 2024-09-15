@@ -74,6 +74,8 @@ nav a {
   align-items: center;
   text-align: center;
   align-items: center;
+  list-style: none;
+  text-decoration: none;
 }
 
 .game-list {
