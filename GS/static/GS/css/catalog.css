@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Reddit+Mono:wght@200..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inconsolata", monospace;
+  background-color: #0c2e42;
+  color: #eeeeee;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+header {
+  background-color: #031b29;
+  color: #e6e6e6;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8vh;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7); /* Larger and darker shadow */
+}
+
+header button {
+  background-color: #e9e9e9; /* Darker green on hover */
+  font-family: "Inconsolata", monospace;
+
+  border: none; /* Remove borders */
+  color: #031b29;
+  padding: 15px 32px; /* Top and bottom padding, left and right padding */
+  text-align: center; /* Center text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Align buttons next to each other */
+  font-size: 16px; /* Text size */
+  margin: 4px 2px; /* Margins between buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.logo {
+  width: 120px;
+  margin-right: -2px; /* Optional: Add some space between the logo and the title */
+}
+
+button:hover {
+  background-color: #073754; /* Green background */
+  transform: scale(1.05); /* Slightly enlarge button */
+  color: white; /* White text */
+}
+
+button:focus {
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.5); /* Add focus outline */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 1.5vh;
+  margin-right: 50px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+
+.game-list {
+  cursor: pointer;
+
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 50px; /* Adding some padding at the bottom for better spacing */
+}
+
+.game-list h1 {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.game-list h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 50px;
+}
+
+.game-list ul {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+
+  justify-content: center;
+}
+
+.game-list li {
+  background: #031b29;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 500px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow here */
+  transition: transform 0.2s ease; /* Optional: Adds a smooth transform effect */
+  color: #e6e6e6;
+}
+
+.game-list li:hover {
+  transform: translateY(-5px); /* Optional: Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Optional: Enhance shadow on hover */
+}
+.game-list img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.game-list p {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.game-list h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+footer {
+  background-color: #031b29;
+
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

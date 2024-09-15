@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+<link rel="stylesheet" href="{% static  'GS/css/catalog.css'%}" />
+<main>
+  <section class="game-list">
+    <h2>Featured Games</h2>
+    <ul>
+      {% for game in games %}
+      <li>
+        <img
+          src="{{ game.image_link }}"
+          alt="{{ game.title }}"
+          style="
+            width: 100%;
+            max-width: 250px;
+            aspect-ratio: 2 / 3;
+            object-fit: cover;
+            height: 90%;
+          "
+        />
+        <a href="{% url 'game_detail' game.id %}">
+          <h1>{{ game.title }}</h1>
+        </a>
+      </li>
+      {% empty %}
+      <li>No games found.</li>
+      {% endfor %}
+    </ul>
+  </section>
+</main>
+{% endblock %}
